@@ -9,6 +9,7 @@ const NameForm = ({ addName }) => {
   const handleSubmit = event => {
     event.preventDefault();
     addName(nameInfo);
+    setNameInfo({ firstName: '', secondName: '', lastName: '', mothersLastName: '' })
   };
 
   return (
@@ -43,7 +44,7 @@ const NameForm = ({ addName }) => {
           value={nameInfo.mothersLastName}
           onChange={handleChange}
         />
-        <button>Submit Contact</button>
+        <button>Send</button>
       </form>
     </div>
   );
