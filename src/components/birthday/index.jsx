@@ -15,7 +15,7 @@ const BirthDayFrom = ({ addBirthDay }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h2>¿Cúal es tu nombre?</h2>
+        <h2>¿Cúal es tu fecha de nacimeinto?</h2>
         <input
           type='number'
           name='day'
