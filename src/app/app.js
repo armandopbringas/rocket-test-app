@@ -1,10 +1,18 @@
+import { useState } from 'react';
+import NameForm from '../components/name';
+import NameData from '../components/name-data';
 import './app.css';
 
-function App() {
+const App = () => {
+  const [ names, setNames ] = useState([]);
+  const addName = name => setNames( [...names, name] );
+
   return (
-    <div className='app'>
-      <h1>Form</h1>
-    </div>
+    <>
+      <h3>Chat form app</h3>
+      <NameForm addName={addName} />
+      <NameData names={names} />
+    </>
   );
 }
 
