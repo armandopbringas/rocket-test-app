@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+const getContactValues = () => {
+	const storedContactData = localStorage.getItem('contactData');
+	if (!storedContactData) return { email: '', phoneNumber: '' }
+	return JSON.parse(storedContactData);
+}
 
 const ContactInfo = ({ addContactInfo }) => {
+  const [ contactData, setcontactData ] = useState(getContactValues);
 
-  const [ contactData, setcontactData ] = useState({ email: '', phoneNumber: '' });
-
-  const handleChange = event => setcontactData({ ...contactData, [event.target.name]: event.target.value });
+  useEffect(() => {
+		localStorage.setItem('contactData', JSON.stringify(contactData));
+	}, [contactData]);
 
   const handleSubmit = event => {
     event.preventDefault();
     addContactInfo(contactData);
-    setcontactData({ email: '', phoneNumber: '' })
   };
+
+  const handleChange = event => setcontactData({ ...contactData, [event.target.name]: event.target.value });
 
   return (
     <div>

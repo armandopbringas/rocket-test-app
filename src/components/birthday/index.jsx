@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+const getBdayValues = () => {
+	const storedBdayData = localStorage.getItem('birthDay');
+	if (!storedBdayData) return { day: '', month: '', year: '' }
+	return JSON.parse(storedBdayData);
+}
 
 const BirthDayFrom = ({ addBirthDay }) => {
+  const [ birthDay, setBirthDay ] = useState(getBdayValues);
 
-  const [ birthDay, setBirthDay ] = useState({ day: '', month: '', year: '' });
-
-  const handleChange = event => setBirthDay({ ...birthDay, [event.target.name]: event.target.value });
+  useEffect(() => {
+		localStorage.setItem('birthDay', JSON.stringify(birthDay));
+	}, [birthDay]);
 
   const handleSubmit = event => {
     event.preventDefault();
     addBirthDay(birthDay);
-    setBirthDay({ day: '', month: '', year: '' })
   };
+
+  const handleChange = event => setBirthDay({ ...birthDay, [event.target.name]: event.target.value });
 
   return (
     <div>

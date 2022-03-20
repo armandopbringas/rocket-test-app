@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
+
+const getNameValues = () => {
+	const storedNameData = localStorage.getItem('nameInfo');
+	if (!storedNameData) return { firstName: '', secondName: '', lastName: '', mothersLastName: '' }
+	return JSON.parse(storedNameData);
+}
 
 const NameForm = ({ addName }) => {
+  const [ nameInfo, setNameInfo ] = useState(getNameValues);
 
-  const [ nameInfo, setNameInfo ] = useState({ firstName: '', secondName: '', lastName: '', mothersLastName: '' });
-
-  const handleChange = event => setNameInfo({ ...nameInfo, [event.target.name]: event.target.value });
+  useEffect(() => {
+		localStorage.setItem('nameInfo', JSON.stringify(nameInfo));
+	}, [nameInfo]);
 
   const handleSubmit = event => {
     event.preventDefault();
     addName(nameInfo);
-    setNameInfo({ firstName: '', secondName: '', lastName: '', mothersLastName: '' })
   }
+
+  const handleChange = event => setNameInfo({ ...nameInfo, [event.target.name]: event.target.value });
 
   return (
     <div>
