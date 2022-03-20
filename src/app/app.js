@@ -18,24 +18,6 @@ const App = () => {
   const addContactInfo = contactInf => setContactInfo( [...contactInfo, contactInf] );
   const onConditional = () => setshowAllData(!showAllData);
 
-  // let searchedTodos = [];
-
-  // if (!searchValue.length >= 1) {
-  //   searchedTodos = todos;
-  // } else {
-  //   searchedTodos = todos.filter(todo => {
-  //     const todoText = todo.text.toLowerCase();
-  //     const searchText = searchValue.toLowerCase();
-  //     return todoText.includes(searchText);
-  //   });
-  // }
-
-  // const saveTodos = (newTodos) => {
-  //   const stringifiedTodos = JSON.stringify(newTodos);
-  //   localStorage.setItem('TODOS_V1', stringifiedTodos);
-  //   setTodos(newTodos);
-  // };
-
   return (
     <div className='app'>
       <h3>Chat form app</h3>

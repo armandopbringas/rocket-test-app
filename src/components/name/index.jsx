@@ -10,7 +10,7 @@ const NameForm = ({ addName }) => {
     event.preventDefault();
     addName(nameInfo);
     setNameInfo({ firstName: '', secondName: '', lastName: '', mothersLastName: '' })
-  };
+  }
 
   return (
     <div>
