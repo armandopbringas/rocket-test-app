@@ -5,7 +5,7 @@ import ContactInfo from '../components/contact';
 import ContactInfoData from '../components/contact-info-data';
 import NameForm from '../components/name';
 import NameData from '../components/name-data';
-import './app.css';
+import { AppWrapper } from './app-styles';
 
 const App = () => {
   const [ names, setNames ] = useState([]);
@@ -19,7 +19,7 @@ const App = () => {
   const onConditional = () => setshowAllData(!showAllData);
 
   return (
-    <div className='app'>
+    <AppWrapper>
       <h3>Chat form app</h3>
       <NameForm addName={addName} />
       <NameData names={names} />
@@ -37,7 +37,7 @@ const App = () => {
           <ContactInfoData contactInfo={contactInfo} />
         </div>
       }
-    </div>
+    </AppWrapper>
   );
 }
 

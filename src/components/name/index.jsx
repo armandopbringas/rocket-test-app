@@ -1,4 +1,5 @@
 import { useState, useEffect  } from 'react';
+import { FormWrapper } from '../../styles/form-wrapper';
 
 const getNameValues = () => {
 	const storedNameData = localStorage.getItem('nameInfo');
@@ -21,7 +22,7 @@ const NameForm = ({ addName }) => {
   const handleChange = event => setNameInfo({ ...nameInfo, [event.target.name]: event.target.value });
 
   return (
-    <div>
+    <FormWrapper>
       <form onSubmit={handleSubmit}>
         <h2>¿Cúal es tu nombre?</h2>
         <input
@@ -54,7 +55,7 @@ const NameForm = ({ addName }) => {
         />
         <button>Send</button>
       </form>
-    </div>
+    </FormWrapper>
   );
 }
 

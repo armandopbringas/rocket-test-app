@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FormWrapper } from '../../styles/form-wrapper';
 
 const getBdayValues = () => {
 	const storedBdayData = localStorage.getItem('birthDay');
@@ -21,7 +22,7 @@ const BirthDayFrom = ({ addBirthDay }) => {
   const handleChange = event => setBirthDay({ ...birthDay, [event.target.name]: event.target.value });
 
   return (
-    <div>
+    <FormWrapper>
       <form onSubmit={handleSubmit}>
         <h2>¿Cúal es tu fecha de nacimeinto?</h2>
         <input
@@ -47,7 +48,7 @@ const BirthDayFrom = ({ addBirthDay }) => {
         />
         <button> send </button>
       </form>
-    </div>
+    </FormWrapper>
   );
 }
 

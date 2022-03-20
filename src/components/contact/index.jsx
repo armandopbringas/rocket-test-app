@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FormWrapper } from '../../styles/form-wrapper';
 
 const getContactValues = () => {
 	const storedContactData = localStorage.getItem('contactData');
@@ -21,7 +22,7 @@ const ContactInfo = ({ addContactInfo }) => {
   const handleChange = event => setcontactData({ ...contactData, [event.target.name]: event.target.value });
 
   return (
-    <div>
+    <FormWrapper>
       <form onSubmit={handleSubmit}>
         <h2>Datos de contacto</h2>
         <input
@@ -40,7 +41,7 @@ const ContactInfo = ({ addContactInfo }) => {
         />
         <button>send</button>
       </form>
-    </div>
+    </FormWrapper>
   );
 }
 
