@@ -1,13 +1,15 @@
+import { BoxMessage } from "../../styles/boxes";
+
 export default function BirthDayData({ bDays }) {
   return (
-    <div>
+    <BoxMessage>
       {bDays.map(item => (
-          <div>
-            <span>{item.day}</span>
-            <span>{item.month}</span>
-            <span>{item.year}</span>
+          <div key={bDays.day} className='message-wrapp'>
+            <p>{item.day}</p>
+            <p>{item.month}</p>
+            <p>{item.year}</p>
           </div>
         ))}
-    </div>
+    </BoxMessage>
   );
 }

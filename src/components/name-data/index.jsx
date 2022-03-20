@@ -1,14 +1,16 @@
+import { BoxMessage } from "../../styles/boxes";
+
 export default function NameData({ names }) {
   return (
-    <div>
+    <BoxMessage>
       {names.map(name => (
-          <div>
-            <span>{name.firstName}</span>
-            <span>{name.secondName}</span>
-            <span>{name.lastName}</span>
-            <span>{name.mothersLastName}</span>
+          <div key={names.firstName} className='message-wrapp'>
+            <p>{name.firstName}</p>
+            <p>{name.secondName}</p>
+            <p>{name.lastName}</p>
+            <p>{name.mothersLastName}</p>
           </div>
         ))}
-    </div>
+    </BoxMessage>
   );
 }
