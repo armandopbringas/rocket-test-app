@@ -11,10 +11,30 @@ const App = () => {
   const [ names, setNames ] = useState([]);
   const [ bDays, setDay ] = useState([]);
   const [ contactInfo, setContactInfo ] = useState([]);
-
+  const [ showAllData, setshowAllData ] = useState(false);
+  
   const addName = name => setNames( [...names, name] );
   const addBirthDay = bDay => setDay( [...bDays, bDay] );
   const addContactInfo = contactInf => setContactInfo( [...contactInfo, contactInf] );
+  const onConditional = () => setshowAllData(!showAllData);
+
+  // let searchedTodos = [];
+
+  // if (!searchValue.length >= 1) {
+  //   searchedTodos = todos;
+  // } else {
+  //   searchedTodos = todos.filter(todo => {
+  //     const todoText = todo.text.toLowerCase();
+  //     const searchText = searchValue.toLowerCase();
+  //     return todoText.includes(searchText);
+  //   });
+  // }
+
+  // const saveTodos = (newTodos) => {
+  //   const stringifiedTodos = JSON.stringify(newTodos);
+  //   localStorage.setItem('TODOS_V1', stringifiedTodos);
+  //   setTodos(newTodos);
+  // };
 
   return (
     <div className='app'>
@@ -25,7 +45,16 @@ const App = () => {
       <BirthDayData bDays={bDays} />
       <ContactInfo addContactInfo={addContactInfo} />
       <ContactInfoData contactInfo={contactInfo} />
-      <button>Iniciar</button>
+      <p>Si tus datos son correctos por favor continuemos</p>
+      <button onClick={onConditional}>Iniciar</button>
+      {
+        showAllData && 
+        <div>
+          <NameData names={names} />
+          <BirthDayData bDays={bDays} />
+          <ContactInfoData contactInfo={contactInfo} />
+        </div>
+      }
     </div>
   );
 }

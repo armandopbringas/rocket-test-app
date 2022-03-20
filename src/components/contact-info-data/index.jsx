@@ -5,7 +5,6 @@ export default function ContactInfoData({ contactInfo }) {
           <div>
             <span>{info.email}</span>
             <span>{info.phoneNumber}</span>
-            <p>Si tus datos son correctos por favor continuemos</p>
           </div>
         ))}
     </div>

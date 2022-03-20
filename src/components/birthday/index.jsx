@@ -33,7 +33,7 @@ const BirthDayFrom = ({ addBirthDay }) => {
         <input
           type='number'
           name='year'
-          placeholder='Mes'
+          placeholder='Año'
           value={birthDay.year}
           onChange={handleChange}
         />
