@@ -8,7 +8,11 @@ capturada como se muestra y a su vez almacenar los datos en variables de sesión
 Puedes utilizar React JS y styled-component o bootstrap.
 
 ## Pasos para resolver la prueba:
-- [ ] paso uno
+1 - Crear un formulario que reciba datos y al enviarlos muestre un mensahe en pantalla con la información introducida en el formulario.
+2 - Realizar el mismo paso anteriro para cada uno de los formularios requeridos: Nombre, fecha de nacimiento y datos de contacto.
+3 - Al hacer click en el botón iniciar desplegar un recuadro que contenga todos los datos anteriromente introducidos en cada formulario.
+4 - Almacenar todos los datos capturados en variables de sesión (en local storage).
+5- Estilizado de la app (con styled components).
 
 ## Referencias visuales:
 <img width="647" alt="Screen Shot 2022-03-20 at 1 13 40" src="https://user-images.githubusercontent.com/52949285/159152291-2f64182a-8614-4781-881a-2c64ca9f5c2e.png">
