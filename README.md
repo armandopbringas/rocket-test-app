@@ -7,6 +7,10 @@ cada uno de los datos deberá mostrar en un recuadro al final con la informació
 capturada como se muestra y a su vez almacenar los datos en variables de sesión.
 Puedes utilizar React JS y styled-component o bootstrap.
 
+
+### URL link:
+https://rocket-test-app.netlify.app/
+
 ## Pasos para resolver la prueba:
 1 - Crear un formulario que reciba datos y al enviarlos muestre un mensahe en pantalla con la información introducida en el formulario.
 2 - Realizar el mismo paso anteriro para cada uno de los formularios requeridos: Nombre, fecha de nacimiento y datos de contacto.
@@ -19,6 +23,3 @@ Puedes utilizar React JS y styled-component o bootstrap.
 
 ## App UI view
 <img width="189" alt="Screen Shot 2022-03-21 at 19 21 33" src="https://user-images.githubusercontent.com/52949285/159388584-4b6efd6b-ac18-449a-ae85-607191fe2a73.png"> <img width="192" alt="Screen Shot 2022-03-21 at 19 22 36" src="https://user-images.githubusercontent.com/52949285/159388676-b686c8d1-ad8b-4534-8a2f-1caf513182cb.png">
-
-## URL link:
-https://rocket-test-app.netlify.app/
