@@ -7,6 +7,9 @@ cada uno de los datos deberá mostrar en un recuadro al final con la informació
 capturada como se muestra y a su vez almacenar los datos en variables de sesión.
 Puedes utilizar React JS y styled-component o bootstrap.
 
+## Pasos para resolver la prueba:
+1 - [ ] paso uno
+
 ## Referencias visuales:
 <img width="647" alt="Screen Shot 2022-03-20 at 1 13 40" src="https://user-images.githubusercontent.com/52949285/159152291-2f64182a-8614-4781-881a-2c64ca9f5c2e.png">
 
